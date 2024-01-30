@@ -46,7 +46,7 @@ func QueryPetById(ctx *cmd.Context, id int) (res *cmd.MsgView, err error) {
 	if pet, err = service.QueryPetById(uint(id)); err != nil {
 		return
 	}
-	res = &cmd.MsgView{Msg: pet.View(), Image: "https://gitee.com/fndream/mg-rep/raw/master/mg/001.png", MDID: 1705978299}
+	res = &cmd.MsgView{Msg: pet.View()}
 	return
 }
 
